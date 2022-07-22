@@ -1,6 +1,6 @@
-#include <iostream>
+#include "paser.h"
 
 int main()
 {
-    std::cout << "Hello My Cmake!" << std::endl;
+    Parse("Hello parse2");
 }
