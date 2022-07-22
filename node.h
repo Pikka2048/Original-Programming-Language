@@ -9,4 +9,4 @@ typedef struct node_t
 } node_t;
 
 node_t* MakeRootNode(std::string data);
-node_t* AddNode(node_t pearent,std::string data);
+node_t* AddNode(node_t *pearent,std::string data);

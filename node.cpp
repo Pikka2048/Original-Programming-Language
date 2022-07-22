@@ -10,6 +10,9 @@ node_t *MakeRootNode(std::string data)
 }
 node_t *AddNode(node_t *pearent, std::string data)
 {
-    struct node_t node = {data};
-    pearent->left = &node;
+    node_t *node = new node_t;
+    node->data = data;
+    pearent->right = node;
+    pearent->left = nullptr;
+    return node;
 }
