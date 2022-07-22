@@ -1,6 +1,9 @@
 #include "paser.h"
+#include "node.h"
 
 int main()
 {
-    Parse("Hello parse2");
+    node_t *result = MakeRootNode("Hack");
+    std::string result_str = result->data;
+    std::cout << result_str << std::endl;
 }
