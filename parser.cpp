@@ -11,8 +11,9 @@ std::string LoadTextFile(std::string filepath)
     std::ifstream ifs(filepath);
     std::stringstream buffer;
 
-    if(ifs.fail()){
-        std::cerr << "Failed to open file." << std::endl;
+    if (ifs.fail())
+    {
+        std::cerr << "Failed to open file : " << filepath << std::endl;
     }
 
     buffer << ifs.rdbuf();
