@@ -19,4 +19,6 @@ int main()
 
     DebugString("---------------------------");
     DisplayNodeConsole(root);
+    DebugString("---------------------------");
+    DebugString(LoadTextFile(".././program.hoge"));
 }
