@@ -1,4 +1,5 @@
 #include "node.h"
+#include "DebugUtl.h"
 #include <iostream>
 
 node_t *MakeRootNode()
@@ -35,7 +36,3 @@ node_t *DisplayNodeConsole(node_t *root)
     }
 }
 
-void DebugString(std::string msg)
-{
-    std::cout << msg << std::endl;
-}

@@ -11,4 +11,3 @@ typedef struct node_t
 node_t* MakeRootNode();
 node_t* AddNode(node_t *pearent,std::string data);
 node_t* DisplayNodeConsole(node_t *root);
-void DebugString(std::string msg);
