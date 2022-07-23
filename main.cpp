@@ -3,7 +3,7 @@
 
 int main()
 {
-    node_t *root = MakeRootNode("Hack");
+    node_t *root = MakeRootNode();
     std::string root_str = root->data;
     std::cout << "Root is " << root_str << std::endl;
 
@@ -16,4 +16,7 @@ int main()
     grandchild = AddNode(child, "Grepe");
     std::string grandchild_str = grandchild->data;
     std::cout << "Child is " << grandchild_str << std::endl;
+
+    DebugString("---------------------------");
+    DisplayNodeConsole(root);
 }
