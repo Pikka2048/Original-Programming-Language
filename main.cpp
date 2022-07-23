@@ -1,6 +1,7 @@
 #include "paser.h"
 #include "node.h"
 #include "DebugUtl.h"
+#include "StringUtl.h"
 
 int main()
 {
@@ -21,5 +22,9 @@ int main()
     DebugString("---------------------------");
     DisplayNodeConsole(root);
     DebugString("---------------------------");
-    DebugString(LoadTextFile(".././program.hoge"));
+    auto readfile = LoadTextFile(".././program.hoge");
+    Parse(readfile);
+    DebugString("---------------------------");
+    auto result = split("Fire,In,The,Hole", ',');
+    DebugString (result[0]);
 }

@@ -1,10 +1,14 @@
 #include "paser.h"
 #include <fstream>
 #include <sstream>
+#include "DebugUtl.h"
 
+// TOKEN : parentheses, doblequotes
+std::array<std::string, 3> PARSE_TOKENS = {"(", ")", R"(")"};
 void Parse(std::string program)
 {
     std::cout << program << std::endl;
+    DebugString(PARSE_TOKENS[2]);
 }
 std::string LoadTextFile(std::string filepath)
 {
