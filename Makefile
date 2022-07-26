@@ -1,6 +1,12 @@
 TARGET = ./build/mylang
-SRCS = main.cpp parser.cpp node.cpp DebugUtl.cpp StringUtl.cpp
+
+SRC_EXT  = cpp
+INC_EXT  = h
+
+SCRS_DIR = scr
+SCRS     = $(wildcard $(SCRS_DIR)/*.$(SRC_EXT))
 CC = g++
+CFLAGS = -g -O1 -Wall 
 
 run: 
-		g++ -g -O1 -Wall $(SRCS) -o $(TARGET) 
+	g++ $(CFLAGS) $(SCRS) -o $(TARGET) 
