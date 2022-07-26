@@ -3,7 +3,7 @@
 #include "DebugUtl.h"
 #include "StringUtl.h"
 
-int main()
+void Example()
 {
     node_t *root = MakeRootNode();
     std::string root_str = root->data;
@@ -25,10 +25,16 @@ int main()
     auto readfile = LoadTextFile(".././program.hoge");
     Parse(readfile);
     DebugString("---------------------------");
-    std::vector<std::string> delims = {",", "?", "!"};
-    std::vector<std::string> result = split3("Fire,In,The?Hole", delims);
+    std::vector<std::string> delims = {"(", ")", R"(")"};
+    ;
+    std::vector<std::string> result = split3(R"(print("Hello My Lang"))", delims);
     for (std::string x : result)
     {
         std::cout << x << "\n";
     }
+}
+
+int main()
+{
+    Example();
 }
