@@ -34,5 +34,5 @@ node_t *DisplayNodeConsole(node_t *root)
         DebugString(target->data);
         DisplayNodeConsole(target);
     }
+    return nullptr;
 }
-

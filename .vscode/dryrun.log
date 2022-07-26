@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/horikawa/mylang'
+g++ -Wall main.cpp parser.cpp node.cpp DebugUtl.cpp StringUtl.cpp -o ./build/mylang 
+make: Leaving directory '/home/horikawa/mylang'
+ 
