@@ -30,9 +30,9 @@ std::vector<std::string> split(const std::string &str, std::vector<std::string> 
         }
         else
         {
-            //+1 Delete Delim: ,Hello! → Hello!
+            //... +1; :Delete Delim: ,Hello! → Hello!
             int debugA = hits[i - 1] + 1;
-            //-1 Delete Delim  Hello! → Hello
+            //... -1; :Delete Delim  Hello! → Hello
             int debugB = hits[i] - hits[i - 1] - 1;
             result = str.substr(debugA, debugB);
         }
