@@ -9,7 +9,7 @@ std::vector<std::string> split(const std::string &str, std::vector<std::string> 
     for (std::string delim : delims)
     {
         int count_char = 0;
-        for (int i = 0; i < str.size(); i++)
+        for (size_t i = 0; i < str.size(); i++)
         {
             if (str[i] == delim[0])
             {
@@ -21,7 +21,7 @@ std::vector<std::string> split(const std::string &str, std::vector<std::string> 
 
     std::sort(hits.begin(), hits.end());
 
-    for (int i = 0; i <= hits.size(); i++)
+    for (size_t i = 0; i <= hits.size(); i++)
     {
         std::string result;
         if (i == 0)
