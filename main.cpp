@@ -2,6 +2,7 @@
 #include "node.h"
 #include "DebugUtl.h"
 #include "StringUtl.h"
+#include <chrono>
 
 void Example()
 {
@@ -33,8 +34,26 @@ void Example()
         std::cout << x << "\n";
     }
 }
+void BenchmarkSplit(int num, std::string str)
+{
+    std::vector<std::string> delims = {"!", "?", "@", "#,", "$"};
+
+    std::chrono::system_clock::time_point start, end;
+    start = std::chrono::system_clock::now();
+    for (int i = 0; i < num; i++)
+    {
+        split3(str, delims);
+    }
+    end = std::chrono::system_clock::now();
+    double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+    std::cout << "Split Benchmark Number of trials\n"
+              << num << "\n"
+              << "elapsed :" << elapsed << std::endl;
+}
 
 int main()
 {
-    Example();
+    std::string test_str1 = "Although it!s true?you have@little control#over most$of#what@happens!in the world, you$have tremendous!influence over#your?experience?of the events!and circumstances@of your#life.";
+    BenchmarkSplit(1000, test_str1);
+    //Example();
 }
