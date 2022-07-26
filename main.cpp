@@ -28,7 +28,7 @@ void Example()
     DebugString("---------------------------");
     std::vector<std::string> delims = {"(", ")", R"(")"};
     ;
-    std::vector<std::string> result = split3(R"(print("Hello My Lang"))", delims);
+    std::vector<std::string> result = split(R"(print("Hello My Lang"))", delims);
     for (std::string x : result)
     {
         std::cout << x << "\n";
@@ -42,7 +42,7 @@ void BenchmarkSplit(int num, std::string str)
     start = std::chrono::system_clock::now();
     for (int i = 0; i < num; i++)
     {
-        split3(str, delims);
+        split(str, delims);
     }
     end = std::chrono::system_clock::now();
     double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
@@ -54,6 +54,6 @@ void BenchmarkSplit(int num, std::string str)
 int main()
 {
     std::string test_str1 = "Although it!s true?you have@little control#over most$of#what@happens!in the world, you$have tremendous!influence over#your?experience?of the events!and circumstances@of your#life.";
-    BenchmarkSplit(1000, test_str1);
+    BenchmarkSplit(100000, test_str1);
     //Example();
 }
