@@ -3,4 +3,4 @@ SRCS = main.cpp parser.cpp node.cpp DebugUtl.cpp StringUtl.cpp
 CC = g++
 
 run: 
-		g++ -g -Wall $(SRCS) -o $(TARGET) 
+		g++ -g -O1 -Wall $(SRCS) -o $(TARGET) 
