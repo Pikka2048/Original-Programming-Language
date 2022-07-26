@@ -25,10 +25,10 @@ int main()
     auto readfile = LoadTextFile(".././program.hoge");
     Parse(readfile);
     DebugString("---------------------------");
-    std::vector<std::string> test = {",", "!", "?"};
-    std::vector<std::string> result2 = split2("Fire?In,The!Hole?Welcome!To,My!World", test);
-    for (std::string e : result2)
+    std::vector<std::string> delims = {",", "?", "!"};
+    std::vector<std::string> result = split3("Fire,In,The?Hole", delims);
+    for (std::string x : result)
     {
-        DebugString(e);
+        std::cout << x << "\n";
     }
 }
