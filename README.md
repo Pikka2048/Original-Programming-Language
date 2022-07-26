@@ -2,8 +2,8 @@
 
 I'm building my own programming language!
 
-Only one function
+Only one function 
 
-Printf(Message)
+```Print(string Message)```
 
 🤔🤔🤔🤔🤔
