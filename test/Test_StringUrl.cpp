@@ -1,6 +1,11 @@
-#include <gtest/gtest.h>
+#include "CppUTest/CommandLineTestRunner.h"
 
-TEST(HelloTest, default_param)
+TEST_GROUP(TestFuncInc){};
+
+TEST(TestFuncInc, CheckReturnValue)
 {
-    EXPECT_EQ("hello", "empty");
+      LONGS_EQUAL(11, 11);
+}
+int main(int argc, char **argv){
+      return CommandLineTestRunner::RunAllTests(argc, argv);
 }
