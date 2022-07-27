@@ -1,9 +1,13 @@
 - TODO
     - Lang
+        - ✓String.Split
+        - [WIP]DebugUtl
         - Parse
+        - Token
         - C++ Class
         - Folder
-            - Cmake
+            - ✓Cmake
+            - [WIP]Makefile
     - Test
-        - Choice Test Framework
-        - Write Test Code
+        - ✓Choice Test Framework
+        - [WIP]Write Test Code
