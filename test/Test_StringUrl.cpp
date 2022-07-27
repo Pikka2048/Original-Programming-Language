@@ -1,5 +1,5 @@
 #include "CppUTest/CommandLineTestRunner.h"
-#include "../scr/StringUtl.h"
+#include "../scr/utility/StringUtl.h"
 #include <vector>
 #include <string>
 
@@ -12,7 +12,7 @@ TEST(TestSplit1, CheckReturnValue)
     std::string test_string = "Don't?get#in@my$way,!";
     result = split(test_string, delims);
     int answer = 6;
-    LONGS_EQUAL(6, answer);
+    LONGS_EQUAL(result.size(), answer);
 }
 int main(int argc, char **argv)
 {

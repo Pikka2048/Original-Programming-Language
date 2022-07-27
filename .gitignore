@@ -1,5 +1,8 @@
 #My Build Directory
 build
+lib
+
+*.log
 
 #C++
 #From https://github.com/github/gitignore/blob/main/C++.gitignore
