@@ -1,6 +1,6 @@
 #Name 
 TARGET = ./build/mylang
-TEST_TARGET = ./build/mylang_test
+TEST_TARGET = ./build/test
 
 #Extension
 SRC_EXT  = cpp
@@ -19,7 +19,7 @@ LIB_SCR_DIR = scr/utility
 LIB_OUTPUT = lib
 LIB_DIR = lib
 
-LIB = -lU
+LIBARGS = -lStringUtl
 
 LIB_DEBUG_UTL = DebugUtl
 LIB_STRING_UTL = StringUtl
@@ -33,7 +33,7 @@ run:
 	g++ $(CFLAGS) $(SCRS) -o $(TARGET) 
 
 utest:
-	g++ $(TEST_SCRS) -o $(TEST_TARGET) -L$(LIB_DIR) $(LIB) -lCppUTest
+	g++ $(TEST_SCRS) -o $(TEST_TARGET) -L$(LIB_DIR) $(LIBARGS) -lCppUTest
 
 $(LIB_DEBUG_UTL):
 	g++ -shared -o $(LIB_OUTPUT)/lib$(LIB_DEBUG_UTL).so -c $(LIB_SCR_DIR)/$(LIB_DEBUG_UTL).$(SRC_EXT)
