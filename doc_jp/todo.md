@@ -1,7 +1,7 @@
 - TODO
     - Lang
         - ✓String.Split
-        - [WIP]DebugUtl
+        - ✓DebugUtl
         - Parse
         - Token
         - C++ Class
