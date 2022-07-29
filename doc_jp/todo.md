@@ -7,7 +7,7 @@
         - C++ Class
         - Folder
             - ✓Cmake
-            - [WIP]Makefile
+            - ✓Makefile
     - Test
         - ✓Choice Test Framework
         - [WIP]Write Test Code
