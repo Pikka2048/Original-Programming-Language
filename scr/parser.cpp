@@ -1,6 +1,7 @@
 #include "paser.h"
 #include <fstream>
 #include <sstream>
+#include "node.h"
 #include "./utility/DebugUtl.h"
 #include "./utility/StringUtl.h"
 
@@ -9,7 +10,10 @@ std::vector<std::string> PARSE_TOKENS = {"(", ")"};
 
 void Parse(std::string program)
 {
-    split(program, PARSE_TOKENS);
+    std::vector<std::string> result = split(program, PARSE_TOKENS);
+    DebugStringList(result);
+
+    node_t *root = MakeRootNode();
 }
 std::string LoadTextFile(std::string filepath)
 {
