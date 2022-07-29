@@ -12,10 +12,6 @@ TEST(TestSplit1, CheckReturnValue)
     std::string test_string = "Don't?get#in@my$way,!";
     
     result = split(test_string, delims);
-    int answer = 5;
+    int answer = 6;
     LONGS_EQUAL(result.size(), answer);
-}
-int main(int argc, char **argv)
-{
-    return CommandLineTestRunner::RunAllTests(argc, argv);
 }

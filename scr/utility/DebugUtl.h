@@ -2,4 +2,6 @@
 #include <string>
 #include <iostream>
 
-void DebugString(std::string msg);
+int DebugString(std::string msg);
+int DebugString(int msg);
+int DebugString(bool msg);

@@ -19,7 +19,7 @@ LIB_SCR_DIR = scr/utility
 LIB_OUTPUT = lib
 LIB_DIR = lib
 
-LIBARGS = -lStringUtl
+LIBARGS = -lStringUtl -lDebugUtl
 
 LIB_DEBUG_UTL = DebugUtl
 LIB_STRING_UTL = StringUtl
