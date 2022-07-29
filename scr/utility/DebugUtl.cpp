@@ -17,3 +17,11 @@ int DebugString(bool msg)
     std::cout << std::boolalpha << msg << std::endl;
     return 0;
 }
+int DebugStringList(std::vector<std::string> msgs)
+{
+    for (std::string m : msgs)
+    {  
+        std::cout << m << std::endl;
+    }
+    return 0;
+}
