@@ -30,7 +30,7 @@ CFLAGS = -g -O1 -Wall
 
 
 run: 
-	g++ $(CFLAGS) $(SCRS) -o $(TARGET) 
+	g++ $(CFLAGS) $(SCRS) -o $(TARGET) -L$(LIB_DIR) $(LIBARGS)
 
 utest:
 	g++ $(TEST_SCRS) -o $(TEST_TARGET) -L$(LIB_DIR) $(LIBARGS) -lCppUTest
