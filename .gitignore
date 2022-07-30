@@ -39,3 +39,7 @@ lib
 *.exe
 *.out
 *.app
+
+# DrawIo
+*.bkp
+*.dtmp

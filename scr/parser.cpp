@@ -24,7 +24,7 @@ void Parse(std::string program)
         std::string current = splitted[loop];
         // Find Element by current
         // found == true : this element is defined LANG TOKEN
-        bool found = std::find(LANG_TOKEN.begin(), LANG_TOKEN.end(), current) != LANG_TOKEN.end();
+        bool found = std::find(LANG_TOKEN_FUNC.begin(), LANG_TOKEN_FUNC.end(), current) != LANG_TOKEN_FUNC.end();
         if (found)
         {
             node_t *child = AddNode(node_current, current);
