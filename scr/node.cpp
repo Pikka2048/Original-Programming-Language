@@ -11,10 +11,11 @@ node_t *MakeRootNode()
     node->type = LangType::LANG;
     return node;
 }
-node_t *AddNode(node_t *pearent, std::string data)
+node_t *AddNode(node_t *pearent, std::string data,LangType type)
 {
     node_t *node = new node_t;
     node->data = data;
+    node->type = type;
     pearent->right = node;
     pearent->left = nullptr;
     return node;

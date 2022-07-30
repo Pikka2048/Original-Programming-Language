@@ -39,7 +39,6 @@ void Parse(std::string program)
 
     // DebugStringList(splitted);
     std::vector<std::string> splitted = LangSplit(program);
-    DebugStringList(splitted);
     for (size_t loop = 0; loop < splitted.size(); loop++)
     {
         std::string current = splitted[loop];
@@ -48,11 +47,11 @@ void Parse(std::string program)
         bool found = std::find(LANG_TOKEN_FUNC.begin(), LANG_TOKEN_FUNC.end(), current) != LANG_TOKEN_FUNC.end();
         if (found)
         {
-            node_t *child = AddNode(node_current, current);
+            node_t *child = AddNode(node_current, current, LangType::LANG);
             node_current = child;
         }
     }
-    // DisplayNodeConsole(root);
+    DisplayNodeConsole(root);
 }
 std::string LoadTextFile(std::string filepath)
 {
