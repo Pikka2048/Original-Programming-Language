@@ -1,7 +1,9 @@
 #include "paser.h"
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include "node.h"
+#include "Token.h"
 #include "./utility/DebugUtl.h"
 #include "./utility/StringUtl.h"
 
@@ -10,10 +12,20 @@ std::vector<std::string> PARSE_TOKENS = {"(", ")"};
 
 void Parse(std::string program)
 {
-    std::vector<std::string> result = split(program, PARSE_TOKENS);
-    DebugStringList(result);
+    std::vector<std::string> splitted = split(program, PARSE_TOKENS);
+    // DebugStringList(splitted);
 
-    node_t *root = MakeRootNode();
+    for (size_t loop = 0; splitted.size(); loop++)
+    {
+        if (splitted[loop].empty())
+            break;
+        std::string current = splitted[loop];
+        // Find Element by current
+        // found == true : this element is defined LANG TOKEN
+        bool found = std::find(LANG_TOKEN.begin(), LANG_TOKEN.end(), current) != LANG_TOKEN.end();
+        DebugString(found);
+    }
+    // node_t *root = MakeRootNode();
 }
 std::string LoadTextFile(std::string filepath)
 {
