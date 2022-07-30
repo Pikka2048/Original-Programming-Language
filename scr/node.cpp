@@ -8,6 +8,7 @@ node_t *MakeRootNode()
     node->data = "root";
     node->left = nullptr;
     node->right = nullptr;
+    node->type = LangType::LANG;
     return node;
 }
 node_t *AddNode(node_t *pearent, std::string data)
