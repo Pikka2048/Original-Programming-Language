@@ -1,4 +1,5 @@
 # MyLang
+# It's under construction and doesn't work
 
 I'm building my own programming language!
 
