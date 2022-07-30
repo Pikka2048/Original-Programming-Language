@@ -26,7 +26,7 @@ LIB_STRING_UTL = StringUtl
 
 #C++ Compiler Option
 CC = g++
-CFLAGS = -g -O1 -Wall
+CFLAGS = -g -Wall
 
 
 run: 

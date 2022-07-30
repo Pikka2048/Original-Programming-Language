@@ -40,10 +40,8 @@ void Parse(std::string program)
     // DebugStringList(splitted);
     std::vector<std::string> splitted = LangSplit(program);
     DebugStringList(splitted);
-    for (size_t loop = 0; splitted.size(); loop++)
+    for (size_t loop = 0; loop < splitted.size(); loop++)
     {
-        if (splitted[loop].empty())
-            break;
         std::string current = splitted[loop];
         // Find Element by current
         // found == true : this element is defined LANG TOKEN
