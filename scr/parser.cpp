@@ -48,7 +48,7 @@ void Parse(std::string program)
         bool found = std::find(LANG_TOKEN_FUNC.begin(), LANG_TOKEN_FUNC.end(), current) != LANG_TOKEN_FUNC.end();
         if (found)
         {
-            node_t *child = AddNode(node_current, current, LangType::LANG);
+            node_t *child = AddNode(node_current, current, LangType::FUNCTION);
             node_current = child;
         }
         else

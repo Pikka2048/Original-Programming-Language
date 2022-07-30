@@ -11,7 +11,7 @@ node_t *MakeRootNode()
     node->type = LangType::LANG;
     return node;
 }
-node_t *AddNode(node_t *pearent, std::string data,LangType type)
+node_t *AddNode(node_t *pearent, std::string data, LangType type)
 {
     node_t *node = new node_t;
     node->data = data;
@@ -28,12 +28,35 @@ node_t *DisplayNodeConsole(node_t *root)
         DebugString("root is nullptr exit func");
         return nullptr;
     }
-    node_t * target;
+    if (root->data == "root")
+    {
+        std::string root_str = root->data + " : " + "Language";
+        DebugString(root_str);
+    }
+
+    node_t *target;
     target = root->right;
 
     if (target != nullptr)
     {
-        DebugString(target->data);
+        std::string type = "";
+        switch (target->type)
+        {
+        case LangType::LANG:
+            type = "Language";
+            break;
+        case LangType::FUNCTION:
+            type = "Function";
+            break;
+        case LangType::STRING:
+            type = "String";
+            break;
+
+        default:
+            break;
+        }
+        std::string output = target->data + " : " + type;
+        DebugString(output);
         DisplayNodeConsole(target);
     }
     return nullptr;
