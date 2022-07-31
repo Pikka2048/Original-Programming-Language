@@ -1,5 +1,6 @@
 #include "paser.h"
 #include "node.h"
+#include "runcode.h"
 #include "./utility/DebugUtl.h"
 #include "./utility/StringUtl.h"
 #include <chrono>
@@ -24,5 +25,6 @@ void BenchmarkSplit(int num, std::string str)
 int main()
 {
     std::string readfile = LoadTextFile("example/program.hoge");
-    Parse(readfile);
+    node_t *root = Parse(readfile);
+    RunCode(root);
 }

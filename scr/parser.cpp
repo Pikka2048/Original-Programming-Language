@@ -2,7 +2,6 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include "node.h"
 #include "Token.h"
 #include "./utility/DebugUtl.h"
 #include "./utility/StringUtl.h"
@@ -32,7 +31,7 @@ std::vector<std::string> LangSplit(std::string str)
     return results;
 }
 
-void Parse(std::string program)
+node_t* Parse(std::string program)
 {
     node_t *root = MakeRootNode();
     node_t *node_current = root;
@@ -64,7 +63,8 @@ void Parse(std::string program)
         }
     }
     // DebugStringList(splitted);
-    DisplayNodeConsole(root);
+    //DisplayNodeConsole(root);
+    return root;
 }
 std::string LoadTextFile(std::string filepath)
 {
